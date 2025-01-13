@@ -17,17 +17,17 @@ export default function Sidebar() {
                 <div>
                 <AiFillCodepenCircle className='text-[50px]' />
                 </div>
-                <div className='mt-3'>UMUFASHA</div>
+                <div className='mt-3'>GAMES PLAN</div>
             </div>
             </Link>
             <div className='py-6 text-[#9ea1a7]'>Menu</div>
             <div className='overflow-y-auto max-h-[calc(100vh-200px)]'>
             {SidebarData.map((item) => (
                 <Link to={item.path} key={item.name}>
-                <div className={`${active === item.path ? 'bg-[#293751]' : null} flex gap-4 hover:bg-[#293751] p-4 rounded-xl`}>
-                    <div className='text-[22px]'>{item.icons}</div>
-                    <div>{item.name}</div>
-                </div>
+                    <div className={`${active === item.path ? 'bg-[#293751]' : null} flex gap-4 hover:bg-[#293751] p-4 rounded-xl`}>
+                        <div className='text-[22px]'>{item.icons}</div>
+                        <div>{item.name}</div>
+                    </div>
                 </Link>
             ))}
             </div>
